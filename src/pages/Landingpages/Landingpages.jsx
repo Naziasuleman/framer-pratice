@@ -16,6 +16,14 @@ export const Landingpages = () => {
     target: divRef,
   });
 
+  //slider functionality
+  const sliderPointsOpacity = [
+    useTransform(scrollYProgress, [0, 0.2], [1, 1]),
+    useTransform(scrollYProgress, [0.2, 0.4], [0.25, 1]),
+    useTransform(scrollYProgress, [0.4, 0.6], [0.25, 1]),
+    useTransform(scrollYProgress, [0.6, 0.8], [0.25, 1]),
+    useTransform(scrollYProgress, [0.8, 1], [0.25, 1]),
+  ];
   const SliderLineTransforms = [
     useTransform(scrollYProgress, [0, 0.2], [0.5, 1]),
     useTransform(scrollYProgress, [0.2, 0.4], [0, 1]),
@@ -24,21 +32,18 @@ export const Landingpages = () => {
     useTransform(scrollYProgress, [0.8, 1], [0, 1]),
   ];
 
-  const sliderPointsOpacity = [
-    useTransform(scrollYProgress, [0, 0.2], [1, 1]),
-    useTransform(scrollYProgress, [0.2, 0.4], [0.25, 1]),
-    useTransform(scrollYProgress, [0.4, 0.6], [0.25, 1]),
-    useTransform(scrollYProgress, [0.6, 0.8], [0.25, 1]),
-    useTransform(scrollYProgress, [0.8, 1], [0.25, 1]),
-  ];
-
-  const cheeseConeRotation = useTransform(scrollYProgress, [0, 0.5], [0, 180]);
-  const domeRoundCubeRotation = useTransform(
+  const domeAndCubeValues = useTransform(
     scrollYProgress,
     [0.5, 0.8],
     [0, -180]
   );
-  const torusRotation = useTransform(scrollYProgress, [0.8, 1], [0, 180]);
+  const HalfCheeseAndConeValues = useTransform(
+    scrollYProgress,
+    [0, 0.5],
+    [0, 180]
+  );
+
+  const torusValues = useTransform(scrollYProgress, [0.8, 1], [0, 180]);
 
   return (
     <>
@@ -182,36 +187,35 @@ export const Landingpages = () => {
 
                 <div
                   className="position-relative d-none d-xl-flex align-items-center w-100"
-                  style={{ height: "700px" }}
+                  style={{ height: "600px" }}
                 >
                   <motion.div
-                    className="position-absolute "
+                    className="position-absolute"
                     style={{
-                      bottom: "35px",
-                      left: "400px",
+                      left: "360px",
+                      top: "40px",
                       zIndex: "10",
-                      rotate: cheeseConeRotation,
+                      rotate: domeAndCubeValues,
                     }}
                   >
                     <img
-                      alt="cheese-half"
-                      height={170}
-                      src={CheeseHalf}
-                      width={170}
+                      alt="dome"
+                      height={160}
+                      src={Dome}
+                      width={160}
                       style={{
-                        maxWidth: "140px",
-                        maxHeight: "140px",
+                        maxWidth: "130px",
+                        maxHeight: "130px",
                       }}
                     />
                   </motion.div>
-
                   <motion.div
                     className="position-absolute"
                     style={{
                       right: "-30px",
                       top: "40px",
                       zIndex: "10",
-                      rotate: cheeseConeRotation,
+                      rotate: HalfCheeseAndConeValues,
                     }}
                   >
                     <img
@@ -227,57 +231,36 @@ export const Landingpages = () => {
                   </motion.div>
 
                   <motion.div
+                    className="position-absolute "
+                    style={{
+                      bottom: "35px",
+                      left: "400px",
+                      zIndex: "10",
+                      rotate: HalfCheeseAndConeValues,
+                    }}
+                  >
+                    <img
+                      alt="cheesehalf"
+                      height={170}
+                      src={CheeseHalf}
+                      width={170}
+                      style={{
+                        maxWidth: "140px",
+                        maxHeight: "140px",
+                      }}
+                    />
+                  </motion.div>
+                  <motion.div
                     className="position-absolute"
-                    style={{
-                      left: "360px",
-                      top: "40px",
-                      zIndex: "10",
-                      rotate: cheeseConeRotation,
-                    }}
-                  >
-                    <img
-                      alt="dome"
-                      height={160}
-                      src={Dome}
-                      width={160}
-                      style={{
-                        maxWidth: "130px",
-                        maxHeight: "130px",
-                      }}
-                    />
-                  </motion.div>
-
-                  <motion.div
-                    className="position-absolute "
-                    style={{
-                      left: "520px",
-                      top: "260px",
-                      zIndex: "10",
-                      rotate: domeRoundCubeRotation,
-                    }}
-                  >
-                    <img
-                      alt="round-cube"
-                      height={200}
-                      src={RoundCube}
-                      width={200}
-                      style={{
-                        maxWidth: "180px",
-                        maxHeight: "180px",
-                      }}
-                    />
-                  </motion.div>
-                  <motion.div
-                    className="position-absolute "
                     style={{
                       bottom: "30px",
                       right: "2px",
                       zIndex: "10",
-                      rotate: torusRotation,
+                      rotate: torusValues,
                     }}
                   >
                     <img
-                      alt="torus-half"
+                      alt="torushalf"
                       height={230}
                       src={TorusHalf}
                       width={230}
@@ -287,6 +270,27 @@ export const Landingpages = () => {
                       }}
                     />
                   </motion.div>
+                  <motion.div
+                    className="position-absolute "
+                    style={{
+                      left: "520px",
+                      top: "220px",
+                      zIndex: "10",
+                      rotate: domeAndCubeValues,
+                    }}
+                  >
+                    <img
+                      alt="roundcube"
+                      height={200}
+                      src={RoundCube}
+                      width={200}
+                      style={{
+                        maxWidth: "180px",
+                        maxHeight: "180px",
+                      }}
+                    />
+                  </motion.div>
+
                   <img
                     alt="torus"
                     className="position-absolute"

@@ -34,12 +34,12 @@ export const Landingpages = () => {
 
   const domeAndCubeValues = useTransform(
     scrollYProgress,
-    [0.5, 0.8],
+    [0.6, 0.7],
     [0, -180]
   );
   const HalfCheeseAndConeValues = useTransform(
     scrollYProgress,
-    [0, 0.5],
+    [0, 0.6],
     [0, 180]
   );
 

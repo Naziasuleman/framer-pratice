@@ -49,49 +49,10 @@ table {
   text-align: start;
 }
 
-.form-check-input {
-  background-color: rgb(255, 255, 255) !important;
-  border-color: rgb(161, 166, 166) !important;
-
-  &:checked {
-    background-color: rgb(87, 201, 201) !important;
-    border-color: rgb(87, 201, 201) !important;
-  }
+/* background colors  */
+.bg-primary-500 {
+  background-color: #7137fb !important;
 }
-
-.save {
-  background-color: rgb(34, 135, 135) !important;
-  color: white !important;
-}
-@media screen and (max-width: 992px) {
-  table {
-    thead {
-      display: none;
-    }
-
-    tr {
-      display: block;
-      margin-bottom: 0px;
-      border: 1px solid rgb(102, 99, 99);
-
-      td {
-        display: block;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        padding-bottom: 8px !important;
-        padding-top: 8px !important;
-        border: 0px !important;
-
-        &:first-child {
-          border-top-left-radius: 8px;
-          border-top-right-radius: 8px;
-        }
-
-        &:last-child {
-          border-bottom-right-radius: 8px;
-          border-bottom-left-radius: 8px;
-        }
-      }
-    }
-  }
+.bg-gray-300 {
+  background-color: #f8f5ff;
 }

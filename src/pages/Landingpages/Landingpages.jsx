@@ -111,7 +111,7 @@ export const Landingpages = () => {
           </motion.section>
         </div>
 
-        <section
+        <div
           ref={divRef}
           className="position-relative align-items-center justify-content-center mt-5 vh-50"
         >
@@ -305,7 +305,7 @@ export const Landingpages = () => {
               </div>
             </div>
           </motion.div>
-        </section>
+        </div>
       </div>
     </>
   );

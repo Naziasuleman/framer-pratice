@@ -1297,6 +1297,15 @@ for-each@^0.3.3:
   dependencies:
     is-callable "^1.1.3"
 
+framer-motion@^11.16.2:
+  version "11.16.2"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.16.2.tgz#44e79827ddf6b8516d065e733d49ade29ef527c0"
+  integrity sha512-M946d8UhmI4lVZ4Wy2bLxw7D7LWw+OZTK5eCFCpGJNpUKt17oCP7+bBM3iKp6PfJF30ngBxsdxssFjLdD85ThA==
+  dependencies:
+    motion-dom "^11.16.1"
+    motion-utils "^11.16.0"
+    tslib "^2.4.0"
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -1768,6 +1777,18 @@ minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
   dependencies:
     brace-expansion "^1.1.7"
+
+motion-dom@^11.16.1:
+  version "11.16.1"
+  resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-11.16.1.tgz#ce1057bbd12bece8eb1cd42f99d64013b24cf949"
+  integrity sha512-XVNf3iCfZn9OHPZYJQy5YXXLn0NuPNvtT3YCat89oAnr4D88Cr52KqFgKa8dWElBK8uIoQhpJMJEG+dyniYycQ==
+  dependencies:
+    motion-utils "^11.16.0"
+
+motion-utils@^11.16.0:
+  version "11.16.0"
+  resolved "https://registry.yarnpkg.com/motion-utils/-/motion-utils-11.16.0.tgz#e75865442278be49e411ca9105c9139edc572811"
+  integrity sha512-ngdWPjg31rD4WGXFi0eZ00DQQqKKu04QExyv/ymlC+3k+WIgYVFbt6gS5JsFPbJODTF/r8XiE/X+SsoT9c0ocw==
 
 ms@2.1.2:
   version "2.1.2"
